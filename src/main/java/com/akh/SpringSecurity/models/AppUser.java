@@ -16,7 +16,7 @@ public class AppUser {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id;
 private String firstName;
-private String lasttName;
+private String lastName;
 @Column(unique= true,nullable = false)
 private String email;
 private String Phone;
