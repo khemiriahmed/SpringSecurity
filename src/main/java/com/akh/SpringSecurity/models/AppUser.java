@@ -16,7 +16,7 @@ public class AppUser {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id;
 private String firstName;
-private String lasttName;
+private String lastName;
 @Column(unique= true,nullable = false)
 private String email;
 private String Phone;
@@ -36,11 +36,11 @@ public String getFirstName() {
 public void setFirstName(String firstName) {
 	this.firstName = firstName;
 }
-public String getLasttName() {
-	return lasttName;
+public String getLastName() {
+	return lastName;
 }
-public void setLasttName(String lasttName) {
-	this.lasttName = lasttName;
+public void setLastName(String lastName) {
+	this.lastName = lastName;
 }
 public String getEmail() {
 	return email;

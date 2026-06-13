@@ -2,7 +2,8 @@ package com.akh.SpringSecurity.services;
 
 import java.util.Optional;
 
-import org.apache.catalina.User;
+
+import org.springframework.security.core.userdetails.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -19,7 +20,7 @@ public class AppUserService implements UserDetailsService {
 	private AppUserRepository repo;
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-	    AppUser appUser = repo.findbyEmail(email);
+	    AppUser appUser = repo.findByEmail(email);
 	    if (appUser != null) {
 	        return  User.withUsername(appUser.getEmail())
 	          

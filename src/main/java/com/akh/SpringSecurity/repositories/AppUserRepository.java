@@ -6,5 +6,5 @@ import com.akh.SpringSecurity.models.AppUser;
 
 public interface AppUserRepository extends JpaRepository<AppUser, Integer> {
 
-	public AppUser findbyEmail(String email);
+	public AppUser findByEmail(String email);
 }
